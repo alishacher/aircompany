@@ -1,7 +1,7 @@
 const ExperimentalTypes   = {
-    LIFTING_BODY: 'lifting_body',
+    LIFTINGBODY: 'LIFTINGBODY',
     HYPERSONIC: 'HYPERSONIC',
-    HIGH_ALTITUDE: 'HIGH_ALTITUDE',
+    HIGHALTITUDE: 'HIGHALTITUDE',
     VTOL: "VTOL"
 };
 
