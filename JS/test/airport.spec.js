@@ -29,9 +29,6 @@ describe('Airport tests', () => {
         new ExperimentalPlane("Ryan X-13 Vertijet", 560, 307, 500, ExperimentalTypes.VTOL, ClassificationLevel.TOPSECRET)
     ];
 
-    let planeWithMaxPassengerCapacity = new PassengerPlane('Boeing-747', 980, 16100, 70500, 242);
-    let planeWithMaxCapacity = new MilitaryPlane('C-130 Hercules', 650, 5000, 110000, MilitaryType.TRANSPORT);
-
     it('Find military planes with transport type', () => {
         let airport = new Airport(planes);
         let transportMilitaryPlanes = [];
@@ -42,14 +39,15 @@ describe('Airport tests', () => {
     it('Find passenger plane with max passenger capacity', () => {
         let airport = new Airport(planes);
         let expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
-        assert.equal(expectedPlaneWithMaxPassengersCapacity.getPassengersCapacity, planeWithMaxPassengerCapacity.getPassengersCapacity);
+        assert.equal(expectedPlaneWithMaxPassengersCapacity.getPassengersCapacity(), planeWithMaxPassengerCapacity.getPassengersCapacity());
     });
 
     it('Find plane with max capacity', () => {
+        let planeWithMaxCapacity = new MilitaryPlane('C-130 Hercules', 650, 5000, 110000, MilitaryType.TRANSPORT);
         let airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         let expectedPlaneWithMaxCapacity = airport[0];
-        assert.equal(expectedPlaneWithMaxCapacity, planeWithMaxCapacity);
+        assert.equal(expectedPlaneWithMaxCapacity.getMaxLoadCapacity(), planeWithMaxCapacity.getMaxLoadCapacity());
     });
 
     it('Find bomber in military planes', () => {
