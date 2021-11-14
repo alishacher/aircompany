@@ -55,13 +55,13 @@ describe('Airport tests', () => {
     it('Find bomber in military planes', () => {
         let airport = new Airport(planes);
         let bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
-        assert.equal(bomberMilitaryPlanes.length,!0);
+        assert.notEqual(bomberMilitaryPlanes.length,0);
     });
 
-    it('Find experimental planes with classification level unclassified', () => {
+    it('Find that there are no experimental planes with classification level unclassified', () => {
         let airport = new Airport(planes);
         let experimentalUnclassifiedPlanes  = airport.getExperimentalUnclassifiedPlanes();
-        assert.equal(experimentalUnclassifiedPlanes.length,!0);
+        assert.equal(experimentalUnclassifiedPlanes.length,0);
     });
 
 });
