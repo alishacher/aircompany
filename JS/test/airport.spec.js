@@ -42,7 +42,7 @@ describe('Airport tests', () => {
     it('Find passenger plane with max passenger capacity', () => {
         let airport = new Airport(planes);
         let expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
-        assert.equal(expectedPlaneWithMaxPassengersCapacity, planeWithMaxPassengerCapacity);
+        assert.equal(expectedPlaneWithMaxPassengersCapacity.getPassengersCapacity, planeWithMaxPassengerCapacity.getPassengersCapacity);
     });
 
     it('Find plane with max capacity', () => {
