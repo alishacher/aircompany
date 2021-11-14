@@ -56,7 +56,7 @@ class Airport {
                 militaryTransportPlanes.push(plane);
             }
         });
-        return transportMilitaryPlanes;
+        return militaryTransportPlanes;
     }
 
     getBomberMilitaryPlanes() {

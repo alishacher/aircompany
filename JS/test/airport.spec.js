@@ -34,7 +34,8 @@ describe('Airport tests', () => {
 
     it('Find military planes with transport type', () => {
         let airport = new Airport(planes);
-        let transportMilitaryPlanes = airport.getMilitaryTransportPlanes();
+        let transportMilitaryPlanes = [];
+        transportMilitaryPlanes = airport.getMilitaryTransportPlanes();
         assert.equal(transportMilitaryPlanes.length,!0);
     });
 
