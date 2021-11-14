@@ -47,7 +47,7 @@ describe('Airport tests', () => {
         let expectedPlaneWithMaxCapacity = new MilitaryPlane('C-130 Hercules', 650, 5000, 110000, MilitaryType.TRANSPORT);
         let airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
-        let planeWithMaxCapacity = airport.getAllPlanes()[0];
+        let planeWithMaxCapacity = airport.getAllPlanes()[airport.getAllPlanes().length-1];
         assert.equal(expectedPlaneWithMaxCapacity.getMaxLoadCapacity(), planeWithMaxCapacity.getMaxLoadCapacity());
     });
 
