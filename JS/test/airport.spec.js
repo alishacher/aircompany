@@ -39,7 +39,7 @@ describe('Airport tests', () => {
     it('Find passenger plane with max passenger capacity', () => {
         let airport = new Airport(planes);
         let expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
-        assert.equal(expectedPlaneWithMaxPassengersCapacity.getPassengersCapacity(), planeWithMaxPassengerCapacity.getPassengersCapacity());
+        assert.equal(expectedPlaneWithMaxPassengersCapacity.getPassengersCapacity, planeWithMaxPassengerCapacity.getPassengersCapacity);
     });
 
     it('Find plane with max capacity', () => {
@@ -47,7 +47,7 @@ describe('Airport tests', () => {
         let airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         let expectedPlaneWithMaxCapacity = airport[0];
-        assert.equal(expectedPlaneWithMaxCapacity.getMaxLoadCapacity(), planeWithMaxCapacity.getMaxLoadCapacity());
+        assert.equal(expectedPlaneWithMaxCapacity.getMaxLoadCapacity, planeWithMaxCapacity.getMaxLoadCapacity);
     });
 
     it('Find bomber in military planes', () => {
